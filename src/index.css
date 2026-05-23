@@ -1,1 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --color-navy: #011133; /* main web navy*/
+    --color-beige: #DADCD7;  /* font color */
+    --color-button-blue: #3A7DA6; /* project's categories */
+    --color-gray: #3C3E3A; /* footer */
+    --color-box-blue: #33415C; /* project outer box */
+    --color-box-gray: #5C677D; /* inner project box */
+    --color-tech-blue: #0253A5; /* technologies used box */
+    --color-exp-blue: #33415C; /* resume box blue */
+    --color-dark-blue: #081A40; /* language box blue */
+    --color-white: #FFFFFF;
+    --color-dark-navy: #010d26;
+}
+
+@layer utilities {
+  .home-bg {
+    background: 
+       linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(15, 40, 68, 0.85) 61%,
+      rgba(1, 17, 51, 1) 100%
+    ),
+    url('./assets/ocean_bg.png') center/cover no-repeat;
+  }
+}
