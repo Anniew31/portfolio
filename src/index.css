@@ -28,3 +28,29 @@
     url('./assets/ocean_bg.png') center/cover no-repeat;
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out infinite; animation-delay: 3s; }
+
+.bubble-shine {
+  background: radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+@keyframes fluidFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.02); }
+}
+
+@keyframes fluidFloatAlt {
+    0%, 100% { transform: translateY(0) scale(1.01); }
+    50% { transform: translateY(-10px) scale(0.99); }
+}
+
+.animate-bubble-slow { animation: fluidFloat 8s ease-in-out infinite; }
+.animate-bubble-fast { animation: fluidFloatAlt 6s ease-in-out infinite; animation-delay: 2s; }
+.animate-float { animation: fluidFloat 7s ease-in-out infinite; }
+.animate-float-delayed { animation: fluidFloatAlt 7s ease-in-out infinite; animation-delay: 3.5s; }

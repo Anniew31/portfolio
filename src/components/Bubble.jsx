@@ -6,20 +6,19 @@ const sizes = {
 
 function Bubble ({project, onClick, bubbleImg}) {
     const bubbleSizeClass = sizes[project.size] || sizes.md;
+    const floatAnimation = project.id % 2 === 0 ? 'animate-bubble-slow' : 'animate-bubble-fast';
 
     return (
         <div 
             onClick={() => onClick(project)}
-            className={`absolute cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-300 ${bubbleSizeClass}`}
+            className={`absolute group cursor-pointer transition-all duration-500 ease-out ${bubbleSizeClass} ${floatAnimation}`}
             style={{top: project.top, left: project.left}}
         >
-            <div className="relative w-full h-full overflow-hidden rounded-full">
-                <img src={bubbleImg} className="w-full h-full object-contain" alt="bubble" />
-                <p className="absolute inset-0 flex items-center justify-center text-beige text-xs sm:text-base lg:text-xl font-extrabold text-center tracking-wide drop-shadow-md z-10 select-non -translate-x-3 sm:-translate-x-5 lg:-translate-x-7">
-                    {project.title}
-                </p>
+            <div className="relative w-full h-full select-none transition-all duration-300 group-hover:scale-105 group-active:scale-95">
+                <img src={bubbleImg} className="w-full h-full object-contain filter transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(218,220,215,0.4)]" alt="bubble" />
+                <p className="absolute inset-0 flex items-center justify-center text-beige text-xs sm:text-base lg:text-xl font-extrabold text-center tracking-wide drop-shadow-md z-10 select-non -translate-x- sm:-translate-x-5 lg:-translate-x-7">{project.title}</p>
+                </div>
             </div>
-        </div>
     )
 }
 
