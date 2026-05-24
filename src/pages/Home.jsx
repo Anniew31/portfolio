@@ -11,6 +11,7 @@ import linkedin_logo from '../assets/logos/linkedin.png'
 import { useState } from 'react'
 import Bubble from '../components/Bubble'
 import projects from '../data/projects'
+import Footer from '../components/Footer'
 
 function Home() {
     const [selectedProject, setSelectedProject] = useState(null)
@@ -53,6 +54,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </main>
     )
 }

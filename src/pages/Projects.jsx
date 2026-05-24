@@ -1,5 +1,12 @@
+import Footer from "../components/Footer"
+
 function Projects() {
-    return <h1>Projects</h1>
+    return (
+        <main>
+            <h1>Projects</h1>
+            <Footer />
+        </main>
+    )
 }
 
 export default Projects

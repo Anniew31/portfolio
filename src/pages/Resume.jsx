@@ -1,5 +1,12 @@
+import Footer from "../components/Footer"
+
 function Resume() {
-    return <h1>Resume</h1>
+    return (
+        <main>
+            <h1>Resume</h1>
+            <Footer />
+        </main>
+    )
 }
 
 export default Resume
