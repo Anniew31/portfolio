@@ -11,14 +11,14 @@ function Footer() {
                 href="https://linkedin.com/in/annie-weng-42b323276/" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex items-center justify-center w-10 h-10 transition-transform duration-200 hover:scale-110">
+                className="flex items-center justify-center w-8 h-8 transition-transform duration-200 hover:scale-110">
                     <img src={linkedin} className="max-w-full max-h-full object-contain" alt="LinkedIn" />
                 </a>
                 <a 
                     href="https://github.com/Anniew31" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="flex items-center justify-center w-10 h-10 transition-transform duration-200 hover:scale-110"
+                    className="flex items-center justify-center w-8 h-8 transition-transform duration-200 hover:scale-110"
                 >
                     <img src={github} className="max-w-full max-h-full object-contain" alt="GitHub" />
                 </a>
@@ -26,7 +26,7 @@ function Footer() {
                     href="mailto:aw899@cornell.edu" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="flex items-center justify-center w-15 h-10 transition-transform duration-200 hover:scale-110 -translate-y-[3px]"
+                    className="flex items-center justify-center w-8 h-8 transition-transform duration-200 hover:scale-110 -translate-y-[3px]"
                 >
                     <img src={email} className="max-w-full max-h-full object-contain" alt="Email" />
                 </a>
