@@ -7,11 +7,14 @@ import linkedin_logo from '../assets/logos/linkedin.png'
 import resume from '../assets/resume.pdf'
 import { useState } from 'react'
 import projects from '../data/projects'
+import ProjectCard from '../components/ProjectDesc'
+import ProjectModal from "../components/ProjectCard"
 
 const categories = ["All", "Games", "Web Development", "Other"]
 
 function Projects() {
     const [activeCategory, setActiveCategory] = useState("All")
+    const [selectedProject, setSelectedProject] = useState(null)
     const filtered = projects.filter(p => {
         if (activeCategory === "All") return true
         if (activeCategory === "Games") return p.category === "games"
@@ -77,9 +80,14 @@ function Projects() {
                         ))}        
                     </div>
                     <div className="w-full border-b border-white/20 mb-6"></div>
-                </div>
-                    
+                    <div className="flex flex-col gap-4">
+                        {filtered.map(project => (
+                            <ProjectCard key={project.id} project={project} onClick={setSelectedProject} />
+                        ))}
+                    </div>
+                </div>    
             </div>
+            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
         </main>
     )
 }
