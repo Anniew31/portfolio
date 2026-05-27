@@ -22,7 +22,7 @@ function Projects() {
         if (activeCategory === "Other") return p.category === "other"
     })
     return (
-        <main className="min-h-screen bg-navy w-full p-6 md:p-10 flex flex-col items-center justify-center font-sans antialiased">
+        <main className="min-h-screen bg-navy w-full flex flex-col items-center justify-between font-sans antialiased pt-12 pb-0">
             <div className="w-full max-w-7xl h-auto md:h-[85vh] bg-box-blue/30 border border-white/20 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col md:flex-row">
                 <aside className="w-full md:w-72 shrink-0 border-b md:border-b-0 md:border-r border-white/20 p-6 sm:p-8 flex flex-col items-center md:overflow-y-auto custom-scrollbar">
                     <img src={profilePic} className="w-40 h-40 rounded-full object-cover shadow-md" alt="Profile" />  
@@ -88,6 +88,9 @@ function Projects() {
                 </div>    
             </div>
             <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+            <div className="mt-16 w-full">
+                <Footer />
+            </div>
         </main>
     )
 }
