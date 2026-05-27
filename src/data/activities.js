@@ -1,6 +1,7 @@
 import cmsx from '../assets/logos/cmsx.png'
 import cup from '../assets/logos/cup.png'
 import brh from '../assets/logos/brh.png'
+import { compareByDepth } from 'framer-motion'
 
 const activities = [
     {

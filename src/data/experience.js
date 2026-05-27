@@ -4,7 +4,7 @@ const experiences = [
     {
         id: 1,
         title: "IT Support Technician",
-        company: "Brooklyn Navy Yard",
+        org: "Brooklyn Navy Yard",
         logo: bny,
         start: "October 2023",
         end: "June 2025",
