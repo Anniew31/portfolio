@@ -6,6 +6,7 @@ import education from "../data/education.js"
 import EduCard from "../components/EduCard.jsx"
 import certificates from "../data/certificates.js"
 import CertCard from "../components/CertCard.jsx"
+import skills from '../data/skills.js'
 
 function Resume() {
     return (
@@ -39,6 +40,39 @@ function Resume() {
                         ))}
                     </div>
                 </section>
+                <section className="flex flex-col gap-8">
+                    <h2 className="text-white font-extrabold text-2xl uppercase tracking-wider border-b border-white/10 pb-3">Skills</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        {skills.map((category) => (
+                            <div key={category.id} className="flex flex-col gap-4">
+                                <div className="flex items-center gap-2.5">
+                                    <img 
+                                        src={category.image}
+                                        className="w-4"
+                                    >
+                                    </img>
+                                    <h3 className="text-white/90 font-bold text-lg tracking-wide">{category.title}</h3>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {category.skills.map((skill, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className="flex items-center gap-2 bg-[#0b1329]/50 border border-white/10 rounded-full py-1.5 px-3.5 shadow-sm backdrop-blur-sm select-none hover:border-white/20 hover:bg-[#111c3a] transition-all duration-200"
+                                        >
+                                            <img 
+                                                src={skill.logo} 
+                                                alt={`${skill.name} Icon`} 
+                                                className="w-3.5 h-3.5 object-contain shrink-0"
+                                            />
+                                            <span className="text-beige/90 text-xs font-semibold tracking-wide">{skill.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
                 <section className="flex flex-col gap-8">
                     <h2 className="text-white font-extrabold text-2xl uppercase tracking-wider border-b border-white/10 pb-3">Certificates</h2>
                     <div className="flex flex-col gap-6">
