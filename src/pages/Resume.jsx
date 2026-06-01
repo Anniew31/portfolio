@@ -59,11 +59,13 @@ function Resume() {
                                             key={idx} 
                                             className="flex items-center gap-2 bg-[#0b1329]/50 border border-white/10 rounded-full py-1.5 px-3.5 shadow-sm backdrop-blur-sm select-none hover:border-white/20 hover:bg-[#111c3a] transition-all duration-200"
                                         >
-                                            <img 
-                                                src={skill.logo} 
-                                                alt={`${skill.name} Icon`} 
-                                                className="w-3.5 h-3.5 object-contain shrink-0"
-                                            />
+                                            {skill.logo && (
+                                                <img 
+                                                    src={skill.logo} 
+                                                    alt={`${skill.name} Icon`} 
+                                                    className="w-3.5 h-3.5 object-contain shrink-0"
+                                                />
+                                            )}
                                             <span className="text-beige/90 text-xs font-semibold tracking-wide">{skill.name}</span>
                                         </div>
                                     ))}
