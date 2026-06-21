@@ -1,25 +1,24 @@
 import critter_sim from '../assets/demos/critter_sim.mp4'
 import little_lemon from '../assets/demos/little_lemon.mp4'
 import bananaship from '../assets/demos/bananaship.mp4'
-import robocup from '../assets/demos/robocup.mp4'
 import critter_thubmnail from '../assets/thumbnails/critter.png'
 import banana_thumbnail from '../assets/thumbnails/bananaship.png'
 import lemon_thumbnail from '../assets/thumbnails/lemon.png'
-import robocup_thumbnail from '../assets/thumbnails/robocup.png'
+import jobagent_thumbnail from '../assets/thumbnails/jobagent.png'
 
 const projects = [
     {
-        id: 1, 
-        title: "Bananaship", 
+        id: 4, 
+        title: "Job Agent", 
         size: "md", 
-        top: "-5%", 
-        left: "10%",
-        category: "games",
-        thumbnail: banana_thumbnail,
-        description: "A fully re-imagined take on the classic Battleship game, built in OCaml with a whimsical banana-and-raccoon theme. Features two distinct play modes: a terminal-based interface for a lightweight command-line experience, and a polished GUI built with TSDL featuring custom sprites, animated hit and miss feedback, and integrated background music. Players take turns on a shared local session, strategically placing bananas and launching attacks on their opponent's grid. Engineered the core game logic in a functional programming paradigm with clean separation of game state, rendering, and input handling.",
-        technologies: ["OCaml", "TDSL"],
-        demo: bananaship,
-        github: "https://github.coecis.cornell.edu/aw899/Wizards-Racoon"
+        top: "50%", 
+        left: "55%",
+        category: "web",
+        thumbnail: jobagent_thumbnail,
+        description: "A full-stack AI-powered platform that automates job application prep. Built a FastAPI and PostgreSQL backend to manage job listings and user data, paired with a Next.js frontend for a clean, responsive interface. Integrated an LLM pipeline that scores job postings against a user's profile for fit and automatically tailors resume content to match each role's requirements — cutting down the manual work of customizing applications one by one. Deployed the backend on Render and the frontend on Vercel for a fully live, production-style deployment.",
+        technologies: ["Python", "TypeScript", "FastAPI", "PostgreSQL", "Next.js", "LLM"],
+        live: "https://job-agent-pipeline.vercel.app/",
+        github: "https://github.com/Anniew31/job-agent"
     },
     {
         id: 2, 
@@ -35,6 +34,19 @@ const projects = [
         github: "Private"
     },
     {
+        id: 1, 
+        title: "Bananaship", 
+        size: "md", 
+        top: "-5%", 
+        left: "10%",
+        category: "games",
+        thumbnail: banana_thumbnail,
+        description: "A fully re-imagined take on the classic Battleship game, built in OCaml with a whimsical banana-and-raccoon theme. Features two distinct play modes: a terminal-based interface for a lightweight command-line experience, and a polished GUI built with TSDL featuring custom sprites, animated hit and miss feedback, and integrated background music. Players take turns on a shared local session, strategically placing bananas and launching attacks on their opponent's grid. Engineered the core game logic in a functional programming paradigm with clean separation of game state, rendering, and input handling.",
+        technologies: ["OCaml", "TDSL"],
+        demo: bananaship,
+        github: "https://github.coecis.cornell.edu/aw899/Wizards-Racoon"
+    },
+    {
         id: 3, 
         title: "Little Lemon", 
         size: "lg", 
@@ -46,19 +58,6 @@ const projects = [
         technologies: ["JavaScript", "React", "HTML", "CSS"],
         demo: little_lemon,
         github: "https://github.com/Anniew31/LittleLemon"
-    },
-    {
-        id: 4, 
-        title: "RoboCup", 
-        size: "md", 
-        top: "50%", 
-        left: "55%",
-        category: "other",
-        thumbnail: robocup_thumbnail,
-        description: "Built a full-stack robot soccer simulation engine from scratch, featuring a multi-agent AI system where autonomous robots compete in real-time matches. Engineered a behavior tree strategy system with attacker/defender/supporter roles, and a physics-accurate dribbler mechanic modeled after real SSL RoboCup robots. The full game experience includes a referee system with halves, overtime, scoring, and procedurally generated crowd audio — all rendered in a custom pixel-art HUD.",
-        technologies: ["Python", "PyMunk", "PyGame"],
-        demo: robocup,
-        github: "https://github.com/KengLL/robocup"
     }
 ]
 
