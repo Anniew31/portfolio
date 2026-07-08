@@ -46,9 +46,13 @@ function Home() {
                 </div>
                 <div className="relative max-w-7xl h-[800px] mx-auto px-6">
                     <div className="relative w-full h-full">
-                        {projects.map(project => (
-                            <Bubble key={project.id} project={project} onClick={setSelectedProject} bubbleImg={bubble} />
-                        ))}
+                        <div className="relative w-full h-full">
+                            {projects
+                                .filter(project => project.featured === "yes")
+                                .map(project => (
+                                    <Bubble key={project.id} project={project} onClick={setSelectedProject} bubbleImg={bubble} />
+                                ))}
+                        </div>
                     </div>
                 </div>
             </section>

@@ -5,8 +5,23 @@ import critter_thubmnail from '../assets/thumbnails/critter.png'
 import banana_thumbnail from '../assets/thumbnails/bananaship.png'
 import lemon_thumbnail from '../assets/thumbnails/lemon.png'
 import jobagent_thumbnail from '../assets/thumbnails/jobagent.png'
+import recall_thumbnail from '../assets/thumbnails/recall.png'
 
 const projects = [
+    {
+        id: 5, 
+        title: "Recall", 
+        size: "md", 
+        top: "-5%", 
+        left: "10%",
+        category: "web",
+        featured: "yes", 
+        thumbnail: recall_thumbnail,
+        description: "(WORK IN PROGRESS) A real-time multiplayer flashcard and study game that turns exam prep into a competitive, social experience. Built with a Node.js and Socket.io backend to handle live game state and low-latency player interactions, backed by Redis for fast session and leaderboard management. Python microservices handle content generation and scoring logic, all containerized and orchestrated with Docker Compose for consistent local and deployment environments. Designed to make studying collaborative and engaging rather than solitary, letting friends race to answer flashcards together in real time.",
+        technologies: ["Node.js", "Socket.io", "Redis", "Python", "Docker Compose"],
+        live: 'WORK IN PROGRESS',
+        github: "https://github.com/Anniew31/recall"
+    }, 
     {
         id: 4, 
         title: "Job Agent", 
@@ -14,6 +29,7 @@ const projects = [
         top: "50%", 
         left: "55%",
         category: "web",
+        featured: "yes", 
         thumbnail: jobagent_thumbnail,
         description: "A full-stack AI-powered platform that automates job application prep. Built a FastAPI and PostgreSQL backend to manage job listings and user data, paired with a Next.js frontend for a clean, responsive interface. Integrated an LLM pipeline that scores job postings against a user's profile for fit and automatically tailors resume content to match each role's requirements — cutting down the manual work of customizing applications one by one. Deployed the backend on Render and the frontend on Vercel for a fully live, production-style deployment.",
         technologies: ["Python", "TypeScript", "FastAPI", "PostgreSQL", "Next.js", "LLM"],
@@ -27,6 +43,7 @@ const projects = [
         top: "0%", 
         left: "45%",
         category: "games",
+        featured: "yes", 
         thumbnail: critter_thubmnail,
         description: "A full-stack simulation engine built in Java that models an evolving ecosystem of programmable artificial life forms. Designed a custom language parser and interpreter from scratch to process critter-specific instructions, enabling complex behavioral logic to execute in real time. Built a responsive JavaFX GUI for live visualization of the simulation world, and architected a multithreaded client-server backend capable of handling concurrent connections from multiple clients simultaneously — allowing the simulation state to be observed and manipulated across sessions.",
         technologies: ["Java", "JavaFX", "Figma"],
@@ -40,6 +57,7 @@ const projects = [
         top: "-5%", 
         left: "10%",
         category: "games",
+        featured: "no", 
         thumbnail: banana_thumbnail,
         description: "A fully re-imagined take on the classic Battleship game, built in OCaml with a whimsical banana-and-raccoon theme. Features two distinct play modes: a terminal-based interface for a lightweight command-line experience, and a polished GUI built with TSDL featuring custom sprites, animated hit and miss feedback, and integrated background music. Players take turns on a shared local session, strategically placing bananas and launching attacks on their opponent's grid. Engineered the core game logic in a functional programming paradigm with clean separation of game state, rendering, and input handling.",
         technologies: ["OCaml", "TDSL"],
@@ -53,6 +71,7 @@ const projects = [
         top: "40%", 
         left: "15%",
         category: "web",
+        featured: "yes", 
         thumbnail: lemon_thumbnail,
         description: "A fully responsive restaurant website built for a fictional Chicago-based Mediterranean eatery. Designed and implemented a multi-page site featuring an interactive table reservation system, dynamic menu displays, and smooth navigation — all optimized for both desktop and mobile viewports. Built with a component-based React architecture for clean, reusable UI, and styled with custom CSS to closely match a real-world client brief.",
         technologies: ["JavaScript", "React", "HTML", "CSS"],
