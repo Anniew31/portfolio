@@ -25,9 +25,9 @@ function Home() {
                     <img src={profilePic} className="w-60 h-60 md:w-80 md:h-80 rounded-2xl object-contain shrink-0" alt="Profile" />
                     <div className="flex flex-col items-center text-center">
                         <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white"> ANNIE <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-teal-500">WENG</span></h1>
-                        <p className="text-cyan-300 font-mono text-xs md:text-sm uppercase tracking-[0.2em] mt-4">// Computer Science Sophomore @ Cornell</p>
+                        <p className="text-cyan-300 font-mono text-xs md:text-sm uppercase tracking-[0.2em] mt-4">// Computer Science Student @ Cornell</p>
                         <p className="text-beige text-sm mt-2 max-w-md font-medium leading-relaxed">
-                            I'm a sophomore studying computer science with an AI minor at Cornell University.
+                            I'm a student studying computer science with an AI minor at Cornell University.
                         </p>
                     </div>
                 </div>
